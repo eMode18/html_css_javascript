@@ -319,3 +319,67 @@ footer .copyright a {
 /* footer end */
 
 /* Responsiveness */
+@media screen and (max-width: 768px) {
+  .main-headings,
+  .primary-heading {
+    font-size: 2.5rem;
+  }
+
+  #our-story {
+    text-align: center;
+  }
+
+  #our-story .title {
+    transform: translateX(50px);
+  }
+
+  #our-story .line {
+    display: none;
+  }
+
+  .content-section {
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  #our-story .img-container .img {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .coffee-container .img-container {
+    margin-top: 5rem;
+    width: 50%;
+  }
+
+  .title-two {
+    margin: 0 auto;
+  }
+
+  .products .title-three {
+    margin-bottom: 5rem;
+    margin-left: 45%;
+  }
+
+  .title {
+    margin: 0 auto;
+  }
+
+  .copyright {
+    max-width: 90%;
+  }
+  footer {
+    margin-top: 8rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  footer .container {
+    margin: 20px;
+    text-align: left;
+    line-height: 1.5;
+  }
+}
