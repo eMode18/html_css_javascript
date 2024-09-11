@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
   --main-color: #deab5f;
@@ -11,6 +12,7 @@ button {
   border: none;
   background: var(--main-color);
   cursor: pointer;
+  border-radius: 3px;
 }
 
 /* reset */
@@ -31,7 +33,22 @@ nav {
   align-items: center;
   color: #fff;
   font-family: sans-serif;
-  padding-top: 15px;
+  padding: 10px 0;
+}
+
+nav .logo {
+  color: var(--main-color);
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+nav span {
+  color: #fff;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 li {
@@ -43,11 +60,12 @@ li a {
   color: #fff;
   text-decoration: none;
   margin-left: 40px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 li a:hover {
   border-bottom: 2px solid var(--main-color);
+  cursor: pointer;
 }
 /* Nav end */
 
@@ -94,3 +112,210 @@ li a:hover {
   background: var(--main-color);
   transform: translateY(60px);
 }
+/* Header end */
+
+/* our story */
+#our-story {
+  /* height: 100vh; */
+  margin-top: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
+  background: url(assets/images/pexels-chitokan-2183027-removebg-preview.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.title-style {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: #fff;
+  transform: translateX(-100px);
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-120px);
+}
+
+.section-content p {
+  max-width: 500px;
+  color: #fff;
+  font-family: sans-serif;
+  line-height: 20px;
+  margin: 20px 0;
+}
+/* our story end */
+
+/* coffee */
+
+.coffee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.content-section p {
+  color: #fff;
+  max-width: 500px;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+.img-container {
+  width: 500px;
+  height: 400px;
+}
+
+.img-2 {
+  width: 400px;
+  height: 400px;
+}
+
+.title-two {
+  font-size: 3rem;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.content-section p {
+  max-width: 500px;
+}
+/* coffee end */
+
+/* Products */
+.products {
+  margin-top: 5rem;
+}
+
+.title-three {
+  font-size: 4rem;
+  margin: 10rem 10rem 10rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  border: 2px solid var(--main-color);
+  padding: 0 20px;
+  height: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -60px;
+}
+
+.img-one {
+  background: url(assets/images/1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.img-two {
+  background: url(assets/images/2.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.img-three {
+  background: url(assets/images/3.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.card-title {
+  color: #fff;
+  font-family: sans-serif;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.card .items p {
+  color: #fff;
+  margin: 20px 0;
+  font-family: sans-serif;
+  opacity: 0.8;
+}
+/* products end */
+
+footer {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+footer .container {
+  margin: 20px;
+  max-width: 300px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+footer .container .contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer .heading-info {
+  margin-bottom: 20px;
+}
+
+footer p {
+  line-height: 25px;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.copyright {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: #4078c0;
+}
+/* footer end */
+
+/* Responsiveness */
