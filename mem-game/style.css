@@ -43,6 +43,8 @@ html {
   background-color: rgba(119, 118, 115, 0.6);
   display: grid;
   place-items: center;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .modal-content {
@@ -93,4 +95,31 @@ html {
   color: var(--white);
   margin-top: 2rem;
   cursor: pointer;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.features .restart-btn {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timer {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+  color: var(--blue);
+}
+
+.timer span {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  width: 2.7rem;
+}
+
+.timer span:last-child {
+  margin-left: 0.5rem;
 }
