@@ -2,7 +2,7 @@ import Controller from "./js/contoller.js";
 
 const selectCellsNumber = document.querySelector("#select-cells-number");
 
-const game = new Controller(selectCellsNumber);
+const game = new Controller(selectCellsNumber.value);
 
 selectCellsNumber.addEventListener("change", (e) => {
   document.querySelector(".playground").innerHTML = "";

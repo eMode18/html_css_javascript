@@ -5,6 +5,21 @@ class Elements {
     this.cardsIndex = [];
     this.doubleIndex();
     this.createCard();
+
+    this.cards = document.querySelectorAll(".card");
+    this.attempts = {
+      correct: 0,
+      wrong: 0,
+      click: 0,
+    };
+
+    this.modal = document.querySelector(".modal");
+    this.modalBtn = document.querySelector(".modal-btn");
+    this.wrong = document.querySelector(".wrong");
+  }
+
+  shuffleIndex(arr) {
+    return arr.sort(() => Math.random() - 0.5);
   }
 
   doubleIndex() {
@@ -25,7 +40,7 @@ class Elements {
       this.cardsNumber
     )}, 1fr)`;
 
-    this.cardsIndex.forEach((index) => {
+    this.shuffleIndex(this.cardsIndex).forEach((index) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("data-index", index);
