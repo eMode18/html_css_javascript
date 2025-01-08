@@ -47,10 +47,15 @@ class Controller {
   }
 
   endGame({ correct }) {
-    const { cardsNumber, modal, modalBtn, wrong, attempts } = this.elements;
+    const { cardsNumber, modal, modalBtn, wrong, attempts, timer, modalTime } =
+      this.elements;
     if (correct === cardsNumber / 2) {
       console.log("You won");
+      this.startClock = true;
+      this.stopTime();
       modal.style.cssText = "visibility: visible; opacity: 1;";
+      const timerClone = timer.cloneNode(true);
+      modalTime.append(timerClone);
       wrong.textContent = attempts.wrong;
       modalBtn.onclick = () => location.reload();
     } else {
@@ -69,6 +74,10 @@ class Controller {
       timer.children[0].innerHTML = minutes > 9 ? minutes : `0${minutes}`;
       int++;
     }, 1000);
+  }
+
+  stopTime() {
+    clearInterval(this.time);
   }
 }
 
