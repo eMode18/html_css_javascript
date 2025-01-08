@@ -16,6 +16,9 @@ class Elements {
     this.modal = document.querySelector(".modal");
     this.modalBtn = document.querySelector(".modal-btn");
     this.wrong = document.querySelector(".wrong");
+    this.restartBtn = document.querySelector(".restart-btn");
+    this.timer = document.querySelector(".timer");
+    this.modalTime = document.querySelector(".modal-time");
   }
 
   shuffleIndex(arr) {

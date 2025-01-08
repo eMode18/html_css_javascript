@@ -5,6 +5,8 @@ class Controller {
     this.elements = new Elements(cardsNumber);
     this.prevCard;
     this.clickCard();
+    this.startClock = true;
+    this.time;
   }
 
   clickCard() {
@@ -12,6 +14,7 @@ class Controller {
 
     cards.forEach((card) => {
       card.addEventListener("click", () => {
+        this.startClock && this.setTime();
         attempts.click++;
         card.classList.add("change");
         if (attempts.click === 2) {
@@ -38,6 +41,7 @@ class Controller {
         } else {
           this.prevCard = card;
         }
+        this.startClock = false;
       });
     });
   }
@@ -52,6 +56,19 @@ class Controller {
     } else {
       console.log("Not yet");
     }
+  }
+
+  setTime() {
+    let int = 1;
+    const { timer } = this.elements;
+
+    this.time = setInterval(() => {
+      const seconds = int % 60;
+      timer.children[1].innerHTML = seconds > 9 ? seconds : `0${seconds}`;
+      const minutes = Math.floor(int / 60);
+      timer.children[0].innerHTML = minutes > 9 ? minutes : `0${minutes}`;
+      int++;
+    }, 1000);
   }
 }
 
