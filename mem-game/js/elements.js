@@ -60,7 +60,7 @@ class Elements {
   restartGame() {
     this.restartBtn.onclick = () => {
       this.modal.style.cssText =
-        "visibility: visible; opacity: 1; transition: opacity 0.5s ease-out;";
+        "visibility: visible; opacity: 1; transition: opacity 0.5s;";
 
       const modalContent = this.modal.firstElementChild;
 
@@ -69,7 +69,7 @@ class Elements {
 
       modalContent.querySelector(".cancel-btn").onclick = () => {
         this.modal.style.cssText =
-          "visibility: hidden; opacity: 0; transition: opacity 0.5s ease-out;";
+          "visibility: hidden; opacity: 0; transition: opacity 0.5s;";
       };
 
       modalContent.querySelector(".yes-btn").onclick = () => {
